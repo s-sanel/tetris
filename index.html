@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="assets/favicon.ico"/>
+    <title>Tetris JavaSript - Sanel Selmanovic</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script type="application/javascript" src="bundle.js"></script>
+    <script src="https://use.fontawesome.com/ac48418f1d.js"></script>
+  </head>
+  <body>
+    <footer>
+      <div class="footer-items">
+        <div class="signature">
+          Sanel
+          <br/>Selmanovic
+        </div>
+        <div class="">
+          <a href="http://www.sanel-selmanovic.us" target="_blank"><i class="fa fa-globe" aria-hidden="true"></i></a>
+        </div>
+        <div class="">
+          <a href="https://github.com/s-sanel" target="_blank"><i class="fa fa-github"></i></a>
+        </div>
+        <div class="">
+          <a href="https://www.linkedin.com/in/sanelselmanovic/" target="_blank"><i class="fa fa-linkedin"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <section class="console">
+      <div class="title">
+        <h1>TETRIS</h1>
+      </div>
+
+      <div class="game">
+
+        <div class="stats">
+          <div class="level">
+            <span>LEVEL</span>
+            <span id="level">1</span>
+          </div>
+
+          <div class="hold">
+            <div class="hold-tetromino">
+              <canvas id="hold-tetromino" width="100px" height="100px"></canvas>
+            </div>
+            <span>HOLD</span>
+          </div>
+        </div>
+
+        <div class="grid">
+          <canvas id="tetris"></canvas>
+        </div>
+
+        <div class="stats">
+          <div class="score">
+            <span>SCORE</span>
+            <span id="score">0</span>
+          </div>
+
+          <div class="next">
+            <div class="next-tetromino">
+              <canvas id="next-tetromino"></canvas>
+            </div>
+            <span>NEXT</span>
+          </div>
+
+          <button id="sound" type="button" name="button" class="sound-button">
+            <i id="full-sound" class="fa fa-volume-up muted" aria-hidden="true">
+            <i id="no-sound" class="fa fa-volume-off unmuted" aria-hidden="true"></i>
+          </i><audio loop id="tetris-audio" src="./assets/tetris-gameboy.mp3"></audio>
+          </button>
+
+        </div>
+
+      </div>
+
+      <div class="controlls">
+        <div class="instructions">
+          <div class="space">
+            <div id="space">Hard drop (space)</div>
+          </div>
+
+          <div class="arrows">
+            <div class="">left <span id="left" class="left">◄</span></div>
+            <div class="midd">
+              <div>rotate<br/><span id="up" class="left">▲</span></div><br/>
+              <div><span id="down" class="left">▼</span><br/>down </div>
+            </div>
+            <div><span id="right" class="left">►</span> right</div>
+          </div>
+
+        </div>
+
+        <hr />
+        <div class="main-menu">
+          <!-- <button id="restart" type="button" name="button">Restart</button> -->
+          <button id="start" type="button" name="button" class="round-button">Start</button>
+          <!-- <span class="toggle">
+              <input type="checkbox">
+              <label data-off="&#9724;" data-on="&#9654;"></label>
+          </span> -->
+        </div>
+
+      </div>
+    </section>
+  </body>
+</html>
