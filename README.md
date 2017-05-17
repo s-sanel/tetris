@@ -18,6 +18,7 @@ In this game, users are able to:
 * Move Tetriminos left, right and down by pressing keyboard left, right and down arrows
 * Rotate Tetrimonos by pressing keyboard up arrow
 * Drop Tetriminos immediately by pressing space on keyboard
+* Hold Tetrimino for the latter use by pressing H on keyboard
 * See the Score which is updated with clearing the rows (extra points when four rows are cleared)
 * See the Level which increases as the score grows and with each level Tetriminos are moving faster
 * See the upcoming (next) Tetrimino
