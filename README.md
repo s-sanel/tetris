@@ -31,7 +31,7 @@ This project is implemented with using following technologies:
 * HTML5 Canvas for drawing the game's grid and the moving pieces
 
 
-<!-- ### Technical Details#
+<!-- ### Technical Details
 
 #### Tetrimino
 
