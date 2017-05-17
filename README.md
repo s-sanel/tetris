@@ -4,7 +4,7 @@
 
 [tetris]: http://sanel-selmanovic.us/tetris/
 
-![Wireframe](./assets/tetris-screenshot.png)
+![Wireframe](assets/tetris-screenshot.png)
 
 ### How to play
 
