@@ -45,6 +45,6 @@ function name(a, b){
 
 
 ### Future Development
-- [ ] Add the ability to hold a piece
+- [x] Add the ability to hold a piece
 - [ ] Choose a level when starting the game
 - [ ] Add a score board
