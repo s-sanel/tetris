@@ -1,0 +1,298 @@
+html, head, body, header, h1, canvas, aside, section, div {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: inherit;
+  text-decoration: inherit;
+}
+
+@font-face {
+    font-family: tetris;
+    src: url(./fonts/DS-DIGIB.TTF);
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  /*overflow: scroll;*/
+}
+
+body {
+  font-family: tetris;
+  background-color: #999;
+  /*background-image: url('./tetris-background.jpg');*/
+  background-image: url('./tetris-tiles.jpg');
+  background-repeat:repeat;
+  /*background-attachment: scroll;*/
+  /*background-position: center center;*/
+  /*-webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;*/
+  text-align: center;
+  color: white;
+
+  display: flex;
+  /*flex-direction: column;*/
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  /*overflow-y: scroll;*/
+}
+
+.console {
+  background-color: #ddd;
+  border: 10px solid #ccc;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.game {
+  display: flex;
+  justify-content: space-between;
+  border: 5px solid;
+  border-color: #987f0f #fae36c #fae36c #987f0f;
+  border-top-color: rgb(152, 127, 15);
+  border-right-color: rgb(250, 227, 108);
+  border-bottom-color: rgb(250, 227, 108);
+  border-left-color: rgb(152, 127, 15);
+  background-color: #9ead86;
+  padding: 10px;
+  font-family: tetris;
+  color: black;
+  font-size: 26px;
+}
+
+.grid {
+  /*padding: 10px;*/
+  border: 2px solid #111;
+  height: 400px;
+  width: 200px;
+  /*background-color: #fefefe;*/
+  background-color: #c4d0b0;
+
+}
+
+.stats{
+  font-family: tetris;
+  color: black;
+  font-size: 26px;
+  margin-left: 10px;
+  position: relative;
+}
+
+.score {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.level {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.next {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.next-tetromino {
+  background-color: #c4d0b0;
+  border: 2px solid #333;
+  margin-bottom: 10px;
+}
+
+
+/*canvas {
+  margin: 0;
+}*/
+
+.title {
+  font-family: tetris, Arial;
+  font-size: 50px;
+  color: #111;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+.instructions {
+  margin-top: 10px;
+  color: #333;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.arrows {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#space {
+  /*border: 1px solid #666;*/
+  border-radius: 5px;
+  background-color: #cfcfcf;
+  cursor: pointer;
+  padding: 5px 10px;
+  box-shadow: 0 -2px 0 3px darken(#fae36c, 10%)
+}
+
+.left {
+  /*border-radius: 5px;
+  background-color: #cfcfcf;
+  cursor: pointer;
+  padding: 5px;
+  box-shadow: 0 -2px 0 3px darken(#fae36c, 10%)*/
+}
+
+/*.mid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}*/
+
+footer {
+  background: #111;
+  background: rgba(22, 22, 22, 0.9);
+  border-radius: 10px;
+  color: #ddd;
+  padding: 15px;
+  margin-right: 50px;
+  height: 600px;
+  /*width: 100%;*/
+  width: 200px;
+  line-height: 26px;
+  display: flex;
+  justify-content: center;
+}
+
+footer a {
+  color: #efefef;
+  font-size: 60px;
+  padding: 5px;
+}
+
+.footer-items {
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.signature {
+  font-family: Arial, Calibri;
+  font-size: 24px;
+  color: #fefefe;
+}
+
+.sound-button {
+  /*border: 1px solid;*/
+  border-radius: 4px;
+  height: 25px;
+  width: 50px;
+  background-color: #9ead86;
+  /*background-color: #c4d0b0;*/
+  cursor: pointer;
+  outline: none;
+  font-weight: bold;
+  font-family: tetris;
+  font-size: 14px;
+
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.sound-button:disabled {
+  background-color: #987f0f;
+  color: #aaa;
+  cursor: default;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.show {
+  visibility: visible;
+}
+
+.muted {
+  color: #999;
+}
+.unmuted {
+  color: #333;
+}
+
+.hold {
+  margin-right: 10px;
+  padding: 10px;
+}
+
+.hold-tetromino {
+  background-color: #c4d0b0;
+  border: 2px solid #333;
+  margin-right: 5px;
+  margin-bottom: 10px;
+
+}
+
+.border {
+  border: 1px solid red;
+}
+
+.main-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+/*.sound-button {
+  border: 1px dotted red;
+  display: flex;
+  justify-content: flex-end;
+}*/
+
+.round-button {
+  font-family: tetris;
+  cursor: pointer;
+  outline: none;
+  font-weight: bold;
+  background: #fae36c;
+  border: 2px solid #bbb;
+  border-radius: 100%;
+  box-shadow: 0 -2px 0 3px darken(#fae36c, 10%)  inset, 0 5px 5px rgba(darken(#FFC334, 40%), 0.17), 0 15px rgba(#aaa, 0.25) inset;
+  display: inline-block;
+  /*height: 5vw;
+  width: 5vw;*/
+  width: 50px;
+  height: 50px;
+}
+
+.round-button:hover {
+    background: #987f0f;
+    box-shadow: 0 -2px 0 3px darken(#987f0f, 10%) inset, 0 5px 5px rgba(darken(#333, 40%), 0.17), 0 15px rgba(#aaa, 0.32) inset;
+}
+
+.round-button:disabled {
+  background-color: #987f0f;
+  color: #aaa;
+  cursor: default;
+}
